@@ -469,10 +469,11 @@
         .hero h1 .line {
             display: block;
             overflow: hidden;
-            padding-bottom: 4px;
+            padding: 0.08em 0 0.1em;
         }
         .hero h1 .line > span {
             display: inline-block;
+            line-height: 1;
             transform: translateY(115%);
             transition: transform 1.15s cubic-bezier(0.16,1,0.3,1);
         }
@@ -731,7 +732,10 @@
             font-size: 40px;
             font-weight: 800;
             letter-spacing: 0.06em;
+            scroll-margin-top: 88px;
         }
+        .section-title { scroll-margin-top: 88px; }
+        section[id]   { scroll-margin-top: 80px; }
         .client-desc {
             font-family: 'Space Mono', monospace;
             font-size: 11px;
@@ -1243,10 +1247,11 @@
             .hero { padding-top: 60px; }
             .hero-text { padding: 56px 22px 64px; }
             .hero h1 {
-                font-size: clamp(54px, 13vw, 84px);
-                line-height: 0.92;
+                font-size: clamp(48px, 12vw, 76px);
+                line-height: 1;
                 margin-bottom: 32px;
             }
+            .hero h1 .line { padding: 0.1em 0 0.12em; }
             .hero-eyebrow { margin-bottom: 28px; }
             .hero-sub {
                 font-size: 15.5px;
@@ -1273,13 +1278,13 @@
             .hero-badge.top-right { top: 76px; right: 16px; }
             .hero-badge.bottom-left { bottom: 16px; left: 16px; }
 
-            .marquee { padding: 20px 0; }
-            .marquee-track { gap: 36px; }
+            .marquee { padding: 18px 0; }
+            .marquee-track { gap: 28px; }
             .marquee-item {
-                font-size: 24px;
-                letter-spacing: 0.06em;
+                font-size: 20px;
+                letter-spacing: 0.05em;
             }
-            .marquee-dot { width: 7px; height: 7px; }
+            .marquee-dot { width: 6px; height: 6px; }
 
             .stats { grid-template-columns: repeat(2,1fr); }
             .stat {
@@ -1421,13 +1426,22 @@
             .particle { display: none; }
         }
 
+        @media (max-width: 460px) {
+            .g3 { grid-template-columns: 1fr; gap: 3px; }
+            .g2 { grid-template-columns: 1fr; gap: 3px; }
+            .ar-portrait { aspect-ratio: 4/5; }
+            .ar-wide     { aspect-ratio: 16/10; }
+        }
+
         @media (max-width: 380px) {
-            .hero h1 { font-size: 52px; }
+            .hero h1 { font-size: 46px; }
             .hero-actions { flex-direction: column; }
             .hero-actions .btn { width: 100%; flex: none; }
-            .section-title { font-size: 40px; }
-            .stat-num { font-size: 38px; }
-            .pkg-price { font-size: 48px; }
+            .section-title { font-size: 38px; }
+            .stat-num { font-size: 36px; }
+            .pkg-price { font-size: 46px; }
+            .marquee-item { font-size: 18px; }
+            .client-name { font-size: 26px; }
         }
     </style>
 </head>
