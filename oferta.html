@@ -1080,12 +1080,19 @@
         .pkg-curr { font-size: 22px; color: var(--text-2); font-weight: 400; }
         .pkg-price {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 72px;
+            font-size: clamp(40px, 4.6vw, 58px);
             font-weight: 800;
             line-height: 1;
-            letter-spacing: -0.035em;
+            letter-spacing: -0.025em;
+            white-space: nowrap;
+        }
+        .pkg-price-sep {
+            color: var(--text-3);
+            margin: 0 0.1em;
+            font-weight: 600;
         }
         .pkg.featured .pkg-price { color: var(--accent); }
+        .pkg.featured .pkg-price-sep { color: rgba(201,169,110,0.5); }
         .pkg-cadence {
             font-family: 'Space Mono', monospace;
             font-size: 13px;
@@ -1093,6 +1100,24 @@
             align-self: flex-end;
             padding-bottom: 8px;
         }
+        .pkg-flex {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-3);
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pkg-flex::before {
+            content: '';
+            width: 16px;
+            height: 1px;
+            background: var(--accent);
+        }
+        .pkg.featured .pkg-flex { color: var(--text-2); }
         .pkg-desc {
             font-size: 14.5px;
             color: var(--text-2);
@@ -1357,9 +1382,11 @@
                 font-size: 30px;
                 margin-bottom: 20px;
             }
-            .pkg-price { font-size: 56px; }
+            .pkg-price { font-size: clamp(32px, 8.5vw, 44px); }
             .pkg-curr { font-size: 18px; }
             .pkg-cadence { font-size: 12px; }
+            .pkg-price-row { flex-wrap: wrap; gap: 4px; }
+            .pkg-flex { font-size: 10px; margin-top: 10px; }
             .pkg-desc {
                 font-size: 13.5px;
                 margin: 20px 0 28px;
@@ -1439,7 +1466,7 @@
             .hero-actions .btn { width: 100%; flex: none; }
             .section-title { font-size: 38px; }
             .stat-num { font-size: 36px; }
-            .pkg-price { font-size: 46px; }
+            .pkg-price { font-size: 30px; }
             .marquee-item { font-size: 18px; }
             .client-name { font-size: 26px; }
         }
@@ -1749,7 +1776,7 @@
             <h2 class="section-title">Elige tu paquete.</h2>
         </div>
         <p class="section-hd-note">
-            Sin contratos eternos.<br>Sin producción complicada.<br>Sin sorpresas.
+            Rangos referenciales.<br>Cada proyecto se ajusta.<br><span style="color: var(--accent);">Hablemos.</span>
         </p>
     </div>
 
@@ -1760,19 +1787,20 @@
             <div class="pkg-name">PACK CAMPAÑA</div>
             <div class="pkg-price-row">
                 <span class="pkg-curr">$</span>
-                <span class="pkg-price">6,500</span>
+                <span class="pkg-price">5,000<span class="pkg-price-sep">–</span>12,000</span>
                 <span class="pkg-cadence">MXN</span>
             </div>
-            <p class="pkg-desc">Producción creativa completa de una campaña visual con IA. Ideal para lanzamientos, temporadas o renovar la imagen de tu marca.</p>
+            <div class="pkg-flex">Ajustable según alcance</div>
+            <p class="pkg-desc">Producción creativa completa de una campaña visual con IA. Ideal para lanzamientos, temporadas o renovar la imagen de tu marca. Cantidad de piezas y rondas se definen contigo.</p>
             <div class="pkg-div"></div>
             <ul class="pkg-features">
-                <li>12 imágenes con IA — producto, lifestyle y concepto creativo</li>
-                <li>2 videos / reels de 10–20 segundos</li>
+                <li>Imágenes con IA — producto, lifestyle y concepto creativo</li>
+                <li>Videos / reels cortos de 10–20 segundos</li>
                 <li>Copy listo para publicar en cada pieza</li>
-                <li>Entrega en 5 días hábiles</li>
-                <li>1 ronda de revisiones incluida</li>
+                <li>Entrega entre 5 y 7 días hábiles</li>
+                <li>Rondas de revisión incluidas</li>
             </ul>
-            <a href="https://forms.gle/pt5meVAJtz9bDCRE7" class="btn btn-outline">Quiero este paquete</a>
+            <a href="https://forms.gle/pt5meVAJtz9bDCRE7" class="btn btn-outline">Hablemos de tu proyecto</a>
         </div>
 
         <!-- Retainer -->
@@ -1781,20 +1809,21 @@
             <div class="pkg-name">RETAINER MENSUAL</div>
             <div class="pkg-price-row">
                 <span class="pkg-curr">$</span>
-                <span class="pkg-price">14,000</span>
+                <span class="pkg-price">10,000<span class="pkg-price-sep">–</span>25,000</span>
                 <span class="pkg-cadence">MXN / mes</span>
             </div>
-            <p class="pkg-desc">Gestión completa de contenido mes a mes. Tu marca siempre activa, siempre relevante, sin que tengas que pensar en ello.</p>
+            <div class="pkg-flex">Ajustable según alcance</div>
+            <p class="pkg-desc">Gestión completa de contenido mes a mes. Tu marca siempre activa, siempre relevante. Volumen, frecuencia y canales se ajustan a lo que tu marca necesita.</p>
             <div class="pkg-div"></div>
             <ul class="pkg-features">
-                <li>16 piezas de contenido IA al mes</li>
-                <li>4 videos / reels de 10–20 segundos</li>
+                <li>Piezas de contenido IA mensuales</li>
+                <li>Videos / reels cortos cada semana</li>
                 <li>Gestión y publicación en redes sociales</li>
                 <li>Captions + hashtags optimizados</li>
                 <li>Reporte mensual de resultados</li>
                 <li>Soporte directo por WhatsApp</li>
             </ul>
-            <a href="https://forms.gle/pt5meVAJtz9bDCRE7" class="btn btn-gold">Quiero este paquete</a>
+            <a href="https://forms.gle/pt5meVAJtz9bDCRE7" class="btn btn-gold">Hablemos de tu marca</a>
         </div>
     </div>
 </section>
