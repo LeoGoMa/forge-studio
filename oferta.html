@@ -1293,6 +1293,7 @@
                 letter-spacing: 0.1em;
             }
             .hero-img { height: 72vw; max-height: 460px; }
+            .hero-img img { transform: none !important; will-change: auto; }
             .hero-badge {
                 padding: 8px 11px;
                 font-size: 9px;
@@ -1877,9 +1878,9 @@
         if (window.scrollY > 50) nav.classList.add('scrolled');
         else nav.classList.remove('scrolled');
 
-        if (heroImg && window.scrollY < window.innerHeight && !reduceMotion) {
-            const offset = window.scrollY * 0.3;
-            const scale = 1 + Math.min(window.scrollY, 600) * 0.0003;
+        if (heroImg && window.scrollY < window.innerHeight && !reduceMotion && isDesktop) {
+            const offset = window.scrollY * 0.25;
+            const scale = 1 + Math.min(window.scrollY, 500) * 0.00025;
             heroImg.style.transform = `translateY(${offset}px) scale(${scale})`;
         }
         ticking = false;
