@@ -1,0 +1,306 @@
+[
+  {
+    "project": "vantif",
+    "slug": "editorial-banff",
+    "width": 1200,
+    "height": 1607,
+    "files": {
+      "480": "img/vantif/editorial-banff-480.webp",
+      "960": "img/vantif/editorial-banff-960.webp",
+      "1600": "img/vantif/editorial-banff-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1200
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "editorial-chipinque",
+    "width": 1600,
+    "height": 2143,
+    "files": {
+      "480": "img/vantif/editorial-chipinque-480.webp",
+      "960": "img/vantif/editorial-chipinque-960.webp",
+      "1600": "img/vantif/editorial-chipinque-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "editorial-lago",
+    "width": 1520,
+    "height": 2036,
+    "files": {
+      "480": "img/vantif/editorial-lago-480.webp",
+      "960": "img/vantif/editorial-lago-960.webp",
+      "1600": "img/vantif/editorial-lago-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1520
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "vantif-01",
+    "width": 1600,
+    "height": 2143,
+    "files": {
+      "480": "img/vantif/vantif-01-480.webp",
+      "960": "img/vantif/vantif-01-960.webp",
+      "1600": "img/vantif/vantif-01-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "vantif-02",
+    "width": 1360,
+    "height": 1360,
+    "files": {
+      "480": "img/vantif/vantif-02-480.webp",
+      "960": "img/vantif/vantif-02-960.webp",
+      "1600": "img/vantif/vantif-02-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1360
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "vantif-03",
+    "width": 1200,
+    "height": 1200,
+    "files": {
+      "480": "img/vantif/vantif-03-480.webp",
+      "960": "img/vantif/vantif-03-960.webp",
+      "1600": "img/vantif/vantif-03-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1200
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "vantif-04",
+    "width": 1600,
+    "height": 1600,
+    "files": {
+      "480": "img/vantif/vantif-04-480.webp",
+      "960": "img/vantif/vantif-04-960.webp",
+      "1600": "img/vantif/vantif-04-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "lifestyle-flatlay",
+    "width": 1520,
+    "height": 2688,
+    "files": {
+      "480": "img/vantif/lifestyle-flatlay-480.webp",
+      "960": "img/vantif/lifestyle-flatlay-960.webp",
+      "1600": "img/vantif/lifestyle-flatlay-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1520
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "macro-quartzip-logo",
+    "width": 1520,
+    "height": 2688,
+    "files": {
+      "480": "img/vantif/macro-quartzip-logo-480.webp",
+      "960": "img/vantif/macro-quartzip-logo-960.webp",
+      "1600": "img/vantif/macro-quartzip-logo-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1520
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "post-core-tee",
+    "width": 1600,
+    "height": 2143,
+    "files": {
+      "480": "img/vantif/post-core-tee-480.webp",
+      "960": "img/vantif/post-core-tee-960.webp",
+      "1600": "img/vantif/post-core-tee-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "post-olive-tee",
+    "width": 1600,
+    "height": 2143,
+    "files": {
+      "480": "img/vantif/post-olive-tee-480.webp",
+      "960": "img/vantif/post-olive-tee-960.webp",
+      "1600": "img/vantif/post-olive-tee-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "vantif",
+    "slug": "post-quarter-zip",
+    "width": 1600,
+    "height": 2143,
+    "files": {
+      "480": "img/vantif/post-quarter-zip-480.webp",
+      "960": "img/vantif/post-quarter-zip-960.webp",
+      "1600": "img/vantif/post-quarter-zip-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "mallas",
+    "slug": "malla-negra-azulejo",
+    "width": 880,
+    "height": 1179,
+    "files": {
+      "480": "img/mallas/malla-negra-azulejo-480.webp",
+      "960": "img/mallas/malla-negra-azulejo-960.webp",
+      "1600": "img/mallas/malla-negra-azulejo-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 880,
+      "1600": 880
+    }
+  },
+  {
+    "project": "mallas",
+    "slug": "malla-negra-lateral-sunset",
+    "width": 800,
+    "height": 1072,
+    "files": {
+      "480": "img/mallas/malla-negra-lateral-sunset-480.webp",
+      "960": "img/mallas/malla-negra-lateral-sunset-960.webp",
+      "1600": "img/mallas/malla-negra-lateral-sunset-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 800,
+      "1600": 800
+    }
+  },
+  {
+    "project": "mallas",
+    "slug": "malla-roja-techo",
+    "width": 1120,
+    "height": 1500,
+    "files": {
+      "480": "img/mallas/malla-roja-techo-480.webp",
+      "960": "img/mallas/malla-roja-techo-960.webp",
+      "1600": "img/mallas/malla-roja-techo-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1120
+    }
+  },
+  {
+    "project": "mallas",
+    "slug": "pergola-beige-sunset",
+    "width": 1600,
+    "height": 1195,
+    "files": {
+      "480": "img/mallas/pergola-beige-sunset-480.webp",
+      "960": "img/mallas/pergola-beige-sunset-960.webp",
+      "1600": "img/mallas/pergola-beige-sunset-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "moda",
+    "slug": "runway-gabardina-charcoal",
+    "width": 1600,
+    "height": 1600,
+    "files": {
+      "480": "img/moda/runway-gabardina-charcoal-480.webp",
+      "960": "img/moda/runway-gabardina-charcoal-960.webp",
+      "1600": "img/moda/runway-gabardina-charcoal-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "moda",
+    "slug": "runway-rayas-azul",
+    "width": 1600,
+    "height": 1600,
+    "files": {
+      "480": "img/moda/runway-rayas-azul-480.webp",
+      "960": "img/moda/runway-rayas-azul-960.webp",
+      "1600": "img/moda/runway-rayas-azul-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1600
+    }
+  },
+  {
+    "project": "forge",
+    "slug": "editorial-fs-pendant",
+    "width": 1520,
+    "height": 2688,
+    "files": {
+      "480": "img/forge/editorial-fs-pendant-480.webp",
+      "960": "img/forge/editorial-fs-pendant-960.webp",
+      "1600": "img/forge/editorial-fs-pendant-1600.webp"
+    },
+    "widths": {
+      "480": 480,
+      "960": 960,
+      "1600": 1520
+    }
+  }
+]

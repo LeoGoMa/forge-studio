@@ -1,2 +1,6 @@
 ﻿*.md
 CORRECCIONES.md
+.taste-skill/
+shots/
+__pycache__/
+.superpowers/
