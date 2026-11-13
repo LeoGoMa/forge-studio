@@ -86,7 +86,9 @@ try {
   await ev(`document.querySelector('.nav__toggle').focus()`);
   await enter(); await espera(400);
   ok('Enter abre el menú y el foco pasa al primer enlace', await ev(`document.querySelector('.nav').classList.contains('is-open') && document.activeElement.matches('.nav__links a:first-child')`));
-  await tab(); await tab(); await espera(100);
+  // un Tab por cada enlace después del primero, sin importar cuántos tenga el menú
+  for (let i = 1, n = await ev(`document.querySelectorAll('.nav__links a').length`); i < n; i++) await tab();
+  await espera(100);
   ok('Tab recorre los enlaces del menú', await ev(`document.activeElement.matches('.nav__links a:last-child')`));
   await tab(); await tab(); await tab(); await espera(300);
   r = await ev(`({ dentro: document.querySelector('.nav').contains(document.activeElement), abierto: document.querySelector('.nav').classList.contains('is-open') })`);

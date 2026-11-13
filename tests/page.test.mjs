@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { readPage, section, attr, tags, text } from './helpers.mjs';
 
 const page = () => readPage('index.html');
-const IDS = ['inicio', 'servicios', 'precios', 'trabajo', 'casos', 'proceso', 'contacto'];
+const IDS = ['inicio', 'servicios', 'precios', 'trabajo', 'casos', 'demos', 'proceso', 'preguntas', 'contacto'];
 const EMAIL = 'forgestudio.work@gmail.com';
 
 // Primer bloque <name …>…</name>.
@@ -17,7 +17,7 @@ const metaContent = (html, key, value) => attr(tags(html, 'meta').find((t) => at
 
 test('orden de secciones', () => {
   const ids = tags(block(page(), 'main'), 'section').map((t) => attr(t, 'id'));
-  // Orden relativo de los siete: se permiten ids extra entre ellos (p. ej. precios-web).
+  // Orden relativo de los nueve: se permiten ids extra entre ellos (p. ej. precios-web).
   assert.deepEqual(ids.filter((id) => IDS.includes(id)), IDS);
 });
 

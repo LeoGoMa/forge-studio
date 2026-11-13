@@ -26,6 +26,22 @@
      del visitante en Google. La de texto se precarga porque el título de la portada la usa. -->
 <link rel="preload" href="fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/sitio.css">
+<!-- las preguntas frecuentes de #preguntas, con el mismo texto (tests/content.test.mjs lo revisa) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Dan factura?", "acceptedAnswer": { "@type": "Answer", "text": "Por ahora trabajamos sin factura; por eso el precio es final, sin IVA adicional." } },
+    { "@type": "Question", "name": "¿Las fotos con IA se ven falsas o cambian mi producto?", "acceptedAnswer": { "@type": "Answer", "text": "Partimos de fotos de tu producto real, aunque sean de celular. La IA cambia el fondo, la luz y el escenario; tu producto no se toca, y apruebas cada foto junto a la original." } },
+    { "@type": "Question", "name": "¿Sirven para Mercado Libre o Amazon?", "acceptedAnswer": { "@type": "Answer", "text": "Te entregamos cada foto con la medida y el fondo que pide cada plataforma. Si alguna te marca una foto, la corregimos sin costo." } },
+    { "@type": "Question", "name": "¿Me hacen una muestra antes de pagar?", "acceptedAnswer": { "@type": "Answer", "text": "Sí: 1 foto de muestra gratis con tu producto. Mándanos 2 o 3 fotos de un producto, como las tengas. Si buscas un sistema, te enseñamos una demo." } },
+    { "@type": "Question", "name": "¿Cuánto tardan?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del trabajo. En 48 horas te mandamos la propuesta con el precio, y ahí van los tiempos de entrega." } },
+    { "@type": "Question", "name": "¿Trabajan fuera de León?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, trabajamos en línea con negocios de todo México. Somos de León, Guanajuato." } },
+    { "@type": "Question", "name": "¿Qué pasa después de entregar?", "acceptedAnswer": { "@type": "Answer", "text": "Te damos seguimiento. Para páginas y sistemas hay mantenimiento opcional desde $1,200 al mes, con hosting y 2 a 3 horas incluidas. En el bot no es opcional: es el «más $1,200 al mes» de su precio." } }
+  ]
+}
+</script>
 <!-- con JS, lo que aparece al bajar empieza escondido; si js/sitio.js no llega en 4 s, todo se muestra igual -->
 <script>document.documentElement.classList.add('js');window.__revelar=setTimeout(function(){document.documentElement.classList.add('revelar-todo')},4000);</script>
 </head>
@@ -40,6 +56,7 @@
       <a class="nav__link" href="#servicios">Servicios</a>
       <a class="nav__link" href="#precios">Precios</a>
       <a class="nav__link" href="#trabajo">Trabajo</a>
+      <a class="nav__link" href="#preguntas">Preguntas</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--primary" href="mailto:forgestudio.work@gmail.com?subject=Quiero%20cotizar" data-cta="contacto">Cotiza por correo</a>
@@ -118,7 +135,7 @@
             <h3>Marketing con IA</h3>
           </div>
           <ul class="rows" role="list">
-            <li><span class="rows__name">Arranque IA</span><span class="rows__value">Desde $5,000 al mes</span><p>2 redes, 12 posts, 4 reels, stories, 10 fotos de catálogo con IA y reporte. Mínimo 3 meses</p></li>
+            <li><span class="rows__name">Arranque IA</span><span class="rows__value">Desde $5,000 al mes</span><p>2 redes, 12 posts, 4 reels, stories, 10 fotos de catálogo con IA y reporte. Mes a mes, sin plazo forzoso</p></li>
             <li><span class="rows__name">Catálogo con IA</span><span class="rows__value">Desde $120 por foto</span><p>Mínimo 20 fotos, con modelos ficticios. En pedidos grandes, menos por foto</p></li>
             <li><span class="rows__name">Anuncios con IA</span><span class="rows__value">Desde $3,500 por 5 videos</span><p>El manejo de campañas y la pauta van aparte</p></li>
             <li><span class="rows__name">Gestión de anuncios en Meta</span><span class="rows__value">Desde $2,500 al mes</span><p>La pauta la paga el cliente</p></li>
@@ -133,10 +150,10 @@
             <li><span class="rows__name">Landing page</span><span class="rows__value">Desde $4,000</span><p>Página de conversión con formulario</p></li>
             <li><span class="rows__name">Catálogo con tallas</span><span class="rows__value">Desde $3,900</span><p>Para zapaterías: tus modelos con las tallas que tienes, y tus clientes apartan por mensaje</p></li>
             <li><span class="rows__name">Tienda en línea</span><span class="rows__value">Desde $8,000</span><p>Shopify o Tiendanube con pagos y envíos</p></li>
-            <li><span class="rows__name">Bot de WhatsApp con IA</span><span class="rows__value">Desde $12,000<br>más $1,500 al mes</span><p>Lo que cobran Meta por mensaje y la IA por uso va aparte, a costo real</p></li>
+            <li><span class="rows__name">Bot de WhatsApp con IA</span><span class="rows__value">Desde $12,000<br>más $1,200 al mes</span><p>Lo que cobran Meta por mensaje y la IA por uso va aparte, a costo real</p></li>
             <li><span class="rows__name">App web a la medida</span><span class="rows__value">Desde $15,000</span><p>Cotizador, mini-CRM, agenda o dashboard</p></li>
             <li><span class="rows__name">Sistema de inventario</span><span class="rows__value">Desde $18,000</span><p>1 almacén, código de barras, alertas y roles</p></li>
-            <li><span class="rows__name">Mantenimiento</span><span class="rows__value">Desde $1,500 al mes</span><p>Hosting y 2 a 3 horas incluidas</p></li>
+            <li><span class="rows__name">Mantenimiento</span><span class="rows__value">Desde $1,200 al mes</span><p>Hosting y 2 a 3 horas incluidas</p></li>
           </ul>
         </div>
         <div class="precios__nota" data-reveal style="--i:2">
@@ -252,6 +269,46 @@
     </div>
   </section>
 
+  <!-- Solo se enlaza lo que está publicado: la demo del bot de citas. Las demás se enseñan por correo o Instagram. -->
+  <section class="section" id="demos" aria-labelledby="demos-h">
+    <div class="wrap">
+      <div class="section-head" data-reveal><h2 id="demos-h">Pruébalo antes de cotizar</h2></div>
+      <div class="demos">
+        <article class="demo-bot" data-reveal style="--i:0">
+          <div class="demo-bot__top">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.5A8 8 0 1 1 20.5 11.5Z"/></svg></span>
+            <span class="case__kicker">Demo en línea</span>
+          </div>
+          <h3>Bot de citas con IA</h3>
+          <p>Atiende el chat de un negocio: informa precios y horarios, agenda, cambia o cancela citas y pasa la plática a una persona cuando hace falta.</p>
+          <ol class="demo-bot__pasos" role="list" aria-label="Cómo probarlo">
+            <li><span class="demo-bot__num" aria-hidden="true">1</span>Elige un negocio de ejemplo: consultorio dental, barbería o taller mecánico.</li>
+            <li><span class="demo-bot__num" aria-hidden="true">2</span>Escribe como cliente, por ejemplo «Quiero agendar una cita».</li>
+            <li><span class="demo-bot__num" aria-hidden="true">3</span>Mira en el panel lo que ve el negocio: la plática y sus citas.</li>
+          </ol>
+          <div class="demo-bot__cta">
+            <a class="btn btn--primary btn--lg" href="https://agenda-ia-nu.vercel.app" target="_blank" rel="noopener">Probar la demo del bot<span class="sr-only"> (se abre en otra pestaña)</span><svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 9 3"/><path d="M4 3h5v5"/></svg></a>
+            <p class="demo-bot__nota">Los negocios son ficticios: usa nombre y teléfono inventados.</p>
+          </div>
+        </article>
+        <div class="demo-mas" data-reveal style="--i:1">
+          <h3>Más demos, por correo o Instagram</h3>
+          <p>Si alguna se parece a tu negocio, pídenosla y te la enseñamos.</p>
+          <ul class="demo-mas__lista" role="list">
+            <li><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4.5A1.5 1.5 0 0 1 4.5 3H12l9 9-9 9-9-9Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><span class="demo-mas__nombre">Catálogo con tallas</span><p>Para zapaterías: tus clientes buscan por su talla y te apartan por mensaje</p></li>
+            <li><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8.5 3.5v2.5M12.5 3.5v2.5"/></svg></span><span class="demo-mas__nombre">Pedidos en línea</span><p>Para cafeterías: menú en el celular, número de pedido y tablero de cocina</p></li>
+            <li><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/></svg></span><span class="demo-mas__nombre">Inventario y ventas</span><p>Para ferreterías: dónde está cada pieza, qué se está acabando, cotizaciones y caja</p></li>
+            <li><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="8" width="19" height="8" rx="1.5"/><path d="M6.5 8v3M10.5 8v4M14.5 8v3M18.5 8v4"/></svg></span><span class="demo-mas__nombre">Cotizador por medidas</span><p>Para herrerías: el precio en el celular con las medidas y a quién darle seguimiento</p></li>
+          </ul>
+          <div class="demo-mas__acciones">
+            <a class="btn btn--secondary" href="mailto:forgestudio.work@gmail.com?subject=Quiero%20ver%20una%20demo">Pide una demo por correo</a>
+            <a class="btn btn--secondary" href="https://ig.me/m/forgestudio.work.ai" target="_blank" rel="noopener">Pide una demo por Instagram<span class="sr-only"> (se abre en otra pestaña)</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="proceso" aria-labelledby="proceso-h">
     <div class="wrap">
       <div class="section-head" data-reveal><h2 id="proceso-h">Cómo trabajamos, en 3 pasos</h2></div>
@@ -259,6 +316,7 @@
         <li class="step">
           <div class="step__top"><span class="step__num" aria-hidden="true">01</span><span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.5A8 8 0 1 1 20.5 11.5Z"/></svg></span></div>
           <h3>Nos cuentas por correo o Instagram qué necesitas</h3>
+          <p>Si son fotos, te hacemos 1 de muestra gratis; si es un sistema, te enseñamos una demo.</p>
           <div class="step__channels" aria-hidden="true">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/></svg></span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span>
@@ -275,6 +333,47 @@
           <p>Los paquetes mensuales se pagan al inicio de cada mes. Los proyectos llevan 50&nbsp;% de anticipo y 50&nbsp;% al entregar. Después damos seguimiento.</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <!-- Las respuestas salen de docs/marketing/respuestas-mensajes.md. El JSON-LD del <head> repite este texto: si
+       cambias una, cambia la otra (tests/content.test.mjs lo revisa). -->
+  <section class="section section--soft" id="preguntas" aria-labelledby="preguntas-h">
+    <div class="wrap faq">
+      <div class="faq__intro" data-reveal>
+        <h2 id="preguntas-h">Preguntas frecuentes</h2>
+        <p>¿Otra duda? Escríbenos por <a class="link" href="mailto:forgestudio.work@gmail.com?subject=Tengo%20una%20pregunta">correo</a> o por <a class="link" href="https://ig.me/m/forgestudio.work.ai" target="_blank" rel="noopener">Instagram<span class="sr-only"> (se abre en otra pestaña)</span></a>.</p>
+      </div>
+      <div class="faq__lista" data-reveal style="--i:1">
+        <details class="faq__item">
+          <summary>¿Dan factura?<span class="faq__icono" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 1.5v9M1.5 6h9"/></svg></span></summary>
+          <p>Por ahora trabajamos sin factura; por eso el precio es final, sin IVA adicional.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Las fotos con IA se ven falsas o cambian mi producto?<span class="faq__icono" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 1.5v9M1.5 6h9"/></svg></span></summary>
+          <p>Partimos de fotos de tu producto real, aunque sean de celular. La IA cambia el fondo, la luz y el escenario; tu producto no se toca, y apruebas cada foto junto a la original.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Sirven para Mercado Libre o Amazon?<span class="faq__icono" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 1.5v9M1.5 6h9"/></svg></span></summary>
+          <p>Te entregamos cada foto con la medida y el fondo que pide cada plataforma. Si alguna te marca una foto, la corregimos sin costo.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Me hacen una muestra antes de pagar?<span class="faq__icono" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 1.5v9M1.5 6h9"/></svg></span></summary>
+          <p>Sí: 1 foto de muestra gratis con tu producto. Mándanos 2 o 3 fotos de un producto, como las tengas. Si buscas un sistema, te enseñamos una demo.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Cuánto tardan?<span class="faq__icono" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 1.5v9M1.5 6h9"/></svg></span></summary>
+          <p>Depende del trabajo. En 48 horas te mandamos la propuesta con el precio, y ahí van los tiempos de entrega.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Trabajan fuera de León?<span class="faq__icono" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 1.5v9M1.5 6h9"/></svg></span></summary>
+          <p>Sí, trabajamos en línea con negocios de todo México. Somos de León, Guanajuato.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Qué pasa después de entregar?<span class="faq__icono" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 1.5v9M1.5 6h9"/></svg></span></summary>
+          <p>Te damos seguimiento. Para páginas y sistemas hay mantenimiento opcional desde $1,200 al mes, con hosting y 2 a 3 horas incluidas. En el bot no es opcional: es el «más $1,200 al mes» de su precio.</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -303,7 +402,7 @@
           <li><a class="link" href="https://www.instagram.com/forgestudio.work.ai/" rel="noopener">@forgestudio.work.ai</a></li>
         </ul>
       </div>
-      <div class="footer__col"><h4>Secciones</h4><ul><li><a class="link" href="#servicios">Servicios</a></li><li><a class="link" href="#precios">Precios</a></li><li><a class="link" href="#trabajo">Trabajo</a></li></ul></div>
+      <div class="footer__col"><h4>Secciones</h4><ul><li><a class="link" href="#servicios">Servicios</a></li><li><a class="link" href="#precios">Precios</a></li><li><a class="link" href="#trabajo">Trabajo</a></li><li><a class="link" href="#demos">Demos</a></li><li><a class="link" href="#preguntas">Preguntas</a></li></ul></div>
     </div>
     <div class="footer__legal">
       <span>© 2026 Forge Studio</span>

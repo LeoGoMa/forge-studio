@@ -71,6 +71,7 @@ test('proceso y cierre', () => {
   const proceso = text(section(html, 'proceso')).replaceAll('&nbsp;', ' ');
   for (const frase of [
     'Nos cuentas por correo o Instagram qué necesitas',
+    'Si son fotos, te hacemos 1 de muestra gratis; si es un sistema, te enseñamos una demo.',
     'Te mandamos propuesta y precio en 48 horas',
     'Los paquetes mensuales se pagan al inicio de cada mes',
     '50 % de anticipo y 50 % al entregar',

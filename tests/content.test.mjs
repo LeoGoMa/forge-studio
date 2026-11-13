@@ -61,17 +61,18 @@ test('precios de marketing', () => {
 test('precios de web y sistemas', () => {
   enOrden(text(section(page(), 'precios')), 'Web y sistemas a la medida', [
     ['Landing page', 'Desde $4,000'],
+    ['Catálogo con tallas', 'Desde $3,900'],
     ['Tienda en línea', 'Desde $8,000'],
-    ['Bot de WhatsApp con IA', 'Desde $12,000 más $1,500 al mes'],
+    ['Bot de WhatsApp con IA', 'Desde $12,000 más $1,200 al mes'],
     ['App web a la medida', 'Desde $15,000'],
-    ['Sistema de inventario', 'Desde $35,000'],
-    ['Mantenimiento', 'Desde $1,500 al mes'],
+    ['Sistema de inventario', 'Desde $18,000'],
+    ['Mantenimiento', 'Desde $1,200 al mes'],
   ]);
 });
 
 test('nota de precios', () => {
   const precios = section(page(), 'precios');
-  for (const frase of ['Precios en pesos mexicanos.', 'Si necesitas factura, se agrega IVA.']) {
+  for (const frase of ['Precios en pesos mexicanos.', 'Precios finales, sin IVA adicional.']) {
     assert.ok(text(precios).includes(frase), frase);
   }
   const ctas = precios.match(/<a\b[^>]*\sdata-cta="contacto"[^>]*>[\s\S]*?<\/a>/g) ?? [];
@@ -146,6 +147,33 @@ test('casos', () => {
   const casos = text(section(page(), 'casos'));
   for (const cliente of ['Vantif', 'Mallas Sombra']) assert.ok(casos.includes(cliente), cliente);
   assert.doesNotMatch(casos, /cl[ií]nica/i);
+});
+
+// Solo se enlaza la demo publicada (el bot de citas); las demás se piden por correo o Instagram.
+test('demos: solo ligas a la demo publicada y a los canales', () => {
+  const ligas = tags(section(page(), 'demos'), 'a');
+  const externas = ligas.map((a) => attr(a, 'href')).filter((href) => /^https?:/.test(href));
+  assert.ok(externas.includes('https://agenda-ia-nu.vercel.app'), 'falta la liga a la demo del bot');
+  for (const href of externas) {
+    assert.ok(['https://agenda-ia-nu.vercel.app', 'https://ig.me/m/forgestudio.work.ai'].includes(href), `liga no aprobada: ${href}`);
+  }
+  for (const a of ligas.filter((a) => attr(a, 'target') === '_blank')) assert.match(attr(a, 'rel') ?? '', /\bnoopener\b/, a);
+});
+
+test('preguntas frecuentes: el JSON-LD repite el texto de cada <details>', () => {
+  const html = page();
+  const preguntas = section(html, 'preguntas');
+  const visibles = [...preguntas.matchAll(/<details\b[^>]*>\s*<summary\b[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)]
+    .map(([, pregunta, respuesta]) => ({ pregunta: text(pregunta), respuesta: text(respuesta) }));
+  assert.equal(visibles.length, 7);
+  const ld = JSON.parse(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(html)?.[1] ?? '{}');
+  assert.equal(ld['@type'], 'FAQPage');
+  assert.deepEqual(ld.mainEntity.map((q) => ({ pregunta: q.name, respuesta: q.acceptedAnswer.text })), visibles);
+  const todo = text(preguntas);
+  assert.ok(todo.includes('Por ahora trabajamos sin factura; por eso el precio es final, sin IVA adicional.'), 'factura');
+  assert.ok(todo.includes('mantenimiento opcional desde $1,200 al mes'), 'mantenimiento');
+  // los tiempos de entrega van en la propuesta: aquí no se promete ningún plazo
+  assert.doesNotMatch(todo, /\d+\s*(?:días|semanas|meses)/);
 });
 
 test('no aparece contenido prohibido', () => {
